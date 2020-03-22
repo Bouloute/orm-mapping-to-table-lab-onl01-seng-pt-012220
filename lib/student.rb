@@ -15,7 +15,7 @@ class Student
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS songs (
         name TEXT,
-        grade INT 
+        grade INT
       );
       SQL
    
