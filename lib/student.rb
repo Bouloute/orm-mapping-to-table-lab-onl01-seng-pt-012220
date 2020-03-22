@@ -9,4 +9,5 @@ class Student
     @name = name
     @grade = grade
     @id = id
+  end
 end
