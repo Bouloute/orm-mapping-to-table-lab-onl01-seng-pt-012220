@@ -30,4 +30,12 @@ class Student
 
     DB[:conn].execute(sql)
   end
+
+  def save
+    sql = <<-SQL
+      INSERT INTO TABLE IF EXISTS students (name, grade) VALUES (?, ?);
+      SQL
+
+    DB[:conn].execute(sql, @name, @grade)
+  end
 end
