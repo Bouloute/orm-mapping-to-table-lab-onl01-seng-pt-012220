@@ -18,8 +18,8 @@ class Student
         grade INT
       );
       SQL
-      DB[:conn].execute(sql)
-    
+
+    DB[:conn].execute(sql)
   end
 
 end
