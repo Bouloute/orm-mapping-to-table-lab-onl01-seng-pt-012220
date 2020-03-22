@@ -10,4 +10,15 @@ class Student
     @grade = grade
     @id = id
   end
+
+  def self.create_table
+    sql = <<-SQL
+      INSERT INTO songs (name, grade) 
+      VALUES (?, ?)
+      SQL
+   
+  DB[:conn].execute(sql, @name, @grade)
+    
+  end
+
 end
